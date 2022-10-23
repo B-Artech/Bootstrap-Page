@@ -1,0 +1,360 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 75px;
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat' sans-serif;
+  background-color: $bg-color;
+}
+
+.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: $blue-color;
+  margin: 0 auto 40px;
+}
+
+nav {
+  text-transform: uppercase;
+  z-index: 1;
+  transition: background-color 0.6s;
+
+  a,
+  i {
+    color: $white-color;
+  }
+
+  a:hover {
+    color: $blue-color;
+  }
+
+  .fa-bars {
+    padding: 10px;
+    color: $white-color;
+  }
+
+  .active {
+    color: $blue-color;
+  }
+}
+
+header {
+  position: relative;
+  color: $white-color;
+
+  h1 {
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  span {
+    color: $blue-color;
+  }
+
+  .hero-img {
+    position: relative;
+    background-image: url('/img/hd-wallpaper-gb6c3b0b33_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    z-index: 0;
+  }
+
+  .hero-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -5;
+  }
+
+  .hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    z-index: 5;
+  }
+
+  .btn-outline-light {
+    text-transform: uppercase;
+  }
+  .fa-chevron-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    color: $white-color;
+  }
+}
+
+.aboutus {
+  color: #333;
+
+  i {
+    margin-top: 20px;
+    font-size: 35px;
+  }
+
+  .aboutus-card-title {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .aboutus-card-title {
+    font-size: 14px;
+  }
+  .aboutus-hover {
+    // transition: color 0.3s;
+  }
+  .aboutus-hover:hover {
+    color: $blue-color;
+  }
+}
+
+.aboutus-hero {
+  position: relative;
+  background-image: url('/img/coding-g6b48aea93_1920.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: $white-color;
+  z-index: 0;
+
+  .aboutus-shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -5;
+  }
+}
+
+.aboutus-hero-item {
+  margin: 10px 0;
+
+  .aboutus-hero-title {
+    font-size: 24px;
+  }
+}
+
+.portfolio {
+  .carousel-item {
+    position: relative;
+    height: 600px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .carousel-indicators {
+    bottom: 20px;
+  }
+}
+
+.prices {
+  .price-box {
+    margin: 10px 20px;
+    padding: 30px;
+    background-color: $bg-color;
+    box-shadow: 2px 2px 5px black;
+    transition: transform 0.3s;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: $blue-color;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  i {
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .price-tag {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .btn {
+    padding: 5px 30px;
+    text-transform: uppercase;
+  }
+
+  .price-box:hover {
+    transform: scale(1.05);
+  }
+
+  .price-info {
+    padding-top: 30px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .prices {
+    .price-info {
+      font-size: 18px;
+    }
+  }
+}
+
+.team {
+  position: relative;
+  background-image: url('/img/architecture-g9445c44cc_1920.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+
+  h2 {
+    color: $white-color;
+  }
+  .team-shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -5;
+  }
+
+  .card {
+    border: none;
+    text-align: center;
+    box-shadow: 2px 2px 5px black;
+    transition: transform 0.3s;
+  }
+  .card-title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  i {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .card:hover {
+    transform: scale(0.98);
+    border: none;
+  }
+  .card-body {
+    height: 160px;
+  }
+}
+
+.achivements {
+  i {
+    padding: 10px;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 0 5px #333;
+  }
+  .achivement-list {
+    padding: 0 20px;
+  }
+  .achivement-num {
+    font-size: 22px;
+  }
+
+  .achivement-text {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+}
+
+.contact {
+  position: relative;
+  background-image: url('/img/skyscraper-g04108d505_1920.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+
+  h2 {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .underline {
+    background-color: #fff;
+  }
+
+  .contact-shadow {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(4, 8, 30, 0.9);
+    z-index: -5;
+  }
+
+  .contact-us {
+    display: flex;
+    align-items: center;
+    color: $white-color;
+  }
+
+  .contact-item {
+    margin: 30px 0;
+
+    h3 {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .media-items {
+      font-size: 30px;
+      a {
+        padding: 10px;
+        color: $white-color;
+      }
+
+      a:hover {
+        color: lightgray;
+      }
+    }
+  }
+}
